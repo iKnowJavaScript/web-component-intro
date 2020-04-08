@@ -18,6 +18,17 @@ class ProgressBar extends HTMLElement {
     return ["progress"];
   }
 
+  attributeChangedCallback(name, previousValue, newValue) {
+    const innerBar = this.shadow.querySelector(".progress-bar-inner");
+
+    switch (name) {
+      case "progress":
+        this._progress = +newValue | 0;
+
+        innerBar.style.width = this.complete + "%";
+        innerBar.innerHTML = this.complete + "%";
+    }
+  }
 
   connectedCallback() {
     var template = `
@@ -43,3 +54,6 @@ class ProgressBar extends HTMLElement {
       </div>
     `;
 
+    this.shadow.innerHTML = template;
+  }
+}
