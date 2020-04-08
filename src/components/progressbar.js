@@ -13,3 +13,8 @@ class ProgressBar extends HTMLElement {
   set progress(value) {
     this.setAttribute("progress", value);
   }
+
+  static get observedAttributes() {
+    return ["progress"];
+  }
+
