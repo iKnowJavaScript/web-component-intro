@@ -1,0 +1,20 @@
+{
+  "name": "web-component-intro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "polymer serve",
+    "build": "polymer build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@webcomponents/webcomponentsjs": "^2.4.3",
+    "lit-element": "^2.3.1"
+  },
+  "devDependencies": {
+    "polymer-cli": "^1.9.11"
+  }
+}
