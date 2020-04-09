@@ -30,6 +30,12 @@ class ProgressBar extends LitElement {
         }
     }
   }
+  handleButtonLoader() {
+    console.log("Button was clicked");
+
+    if (this.progress < 99) return;
+    this.runProgression();
+  }
 
   render() {
     return html`
