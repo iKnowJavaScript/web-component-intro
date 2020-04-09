@@ -8,6 +8,30 @@ export class Button extends LitElement {
     };
   }
 
+  static get styles() {
+    return css`
+      .btn {
+        color: gray;
+        background: #2b2d42;
+        color: #fff;
+        margin: 0.5rem auto;
+        display: flex;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        padding: 0.5em 1em;
+        border: solid 1px transparent;
+        border-radius: 4px;
+        outline: 0;
+      }
+
+      .btn:hover {
+        background: #fff;
+        color: #2b2d42;
+        border: solid 1px #2b2d42;
+      }
+    `;
+  }
 
   constructor() {
     super();
