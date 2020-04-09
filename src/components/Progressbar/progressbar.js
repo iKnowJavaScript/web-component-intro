@@ -31,4 +31,17 @@ class ProgressBar extends LitElement {
     }
   }
 
+  render() {
+    return html`
+      <div class="progress-bar">
+        <div class="progress-bar-inner">${this.progress}%</div>
+      </div>
+      <custom-button
+        title=${this.progress < 99 ? "Loading..." : "Click to reload"}
+        .button_click=${this.handleButtonLoader.bind(this)}
+      ></custom-button>
+    `;
+  }
+}
+
 customElements.define("progress-bar", ProgressBar);
