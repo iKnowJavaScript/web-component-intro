@@ -17,6 +17,21 @@ class ProgressBar extends LitElement {
     this.progress = 0;
   }
 
+  runProgression() {
+    const innerBar = this.shadowRoot.querySelector(".progress-bar-inner");
+    let progress = 0;
+    const progressInterval = setInterval(() => {
+      progress += 1;
+      if (progress <= 100) {
+        this.progress = progress;
+        if (innerBar) {
+          innerBar.style.width = this.progress + "%";
+        }
+      } else {
+        clearInterval(progressInterval);
+      }
+    }, 100);
+  }
 
   attributeChangedCallback(prop, previousValue, newValue) {
     const innerBar = this.shadowRoot.querySelector(".progress-bar-inner");
