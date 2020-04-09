@@ -4,16 +4,16 @@ export const style = css`
   .progress-bar {
     width: 50%;
     height: 30px;
-    background-color: #edf2f4;
+    background-color: var(--main-loader-bg, --main-btn-bg);
     border-radius: 5px;
-    color: #fff;
+    color: var(--main-btn-color, white);
     margin: auto;
     margin-top: 50px;
   }
   .progress-bar-inner {
     height: 100%;
     line-height: 30px;
-    background: #2b2d42;
+    background: var(--main-btn-bg, green);
     text-align: center;
     border-radius: 5px;
     width: 0%;

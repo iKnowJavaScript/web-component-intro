@@ -12,8 +12,8 @@ export class Button extends LitElement {
     return css`
       .btn {
         color: gray;
-        background: #2b2d42;
-        color: #fff;
+        background: var(--main-btn-bg, green);
+        color: var(--main-btn-color, white);
         margin: 0.5rem auto;
         display: flex;
         cursor: pointer;
@@ -26,9 +26,9 @@ export class Button extends LitElement {
       }
 
       .btn:hover {
-        background: #fff;
-        color: #2b2d42;
-        border: solid 1px #2b2d42;
+        background: var(--main-btn-color, white);
+        color: var(--main-btn-bg, green);
+        border: solid 1px var(--main-btn-bg, green);
       }
     `;
   }
