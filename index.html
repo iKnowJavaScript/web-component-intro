@@ -13,6 +13,31 @@
         box-sizing: border-box;
       }
     </style>
+
+    <script
+      type="module"
+      src="src/components/Progressbar/progressbar.js"
+    ></script>
   </head>
-  <body></body>
+  <body>
+    <progress-bar></progress-bar>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+
+    <script>
+      (function () {
+        const progressBar = document.querySelector("progress-bar");
+        let progress = 0;
+        const progressInterval = setInterval(() => {
+          progress += 1;
+          if (progress <= 100) {
+            progressBar.setAttribute("progress", progress);
+          } else {
+            clearInterval(progressInterval);
+          }
+        }, 100);
+      })();
+    </script>
+  </body>
 </html>
